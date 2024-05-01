@@ -1,7 +1,7 @@
 'use client'
-import cn from 'classnames';
 import React, { useState } from 'react';
 import { Flex, Radio, Text, Box } from '@radix-ui/themes';
+import { cn } from '@/lib/utils';
 interface IRadioGroupSize {}
 
 const sizes = ['8', '28', '48', '70', '160']
@@ -12,6 +12,7 @@ console.log(size)
 const handleChange = (size: string) => {
     setSize(size)
 }
+
     return (
         <>
         <Box>
@@ -24,6 +25,7 @@ const handleChange = (size: string) => {
         <Text as="label" size="2">
           <Radio name={sizeOptions} value={sizeOptions} onClick={() => handleChange(sizeOptions)} defaultChecked />
           <div 
+          style={{ borderRadius: '0.375rem' }}
         className={cn(
             'absolute border-solid border-black rounded-md border-2 flex items-center justify-center top-0 left-0 z-10 w-full h-full bg-white pointer-events-none',
             { 'text-white bg-black': size === sizeOptions }

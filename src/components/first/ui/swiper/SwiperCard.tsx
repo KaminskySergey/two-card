@@ -1,5 +1,4 @@
 'use client'
-import { useState } from "react";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -8,14 +7,15 @@ import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import Image from "next/image";
+import SwiperBtn from './SwiperBtn';
 interface ISwiper { }
 
 export default function SwiperCard({ }: ISwiper) {
   return <>
     <Swiper
       spaceBetween={10}
-      navigation={true}
-
+      // navigation={true}
+      style={{ borderRadius: '12px' }}
       modules={[FreeMode, Navigation, Thumbs]}
       className="mySwiper2"
     >
@@ -39,9 +39,10 @@ export default function SwiperCard({ }: ISwiper) {
       </SwiperSlide>
       
 
+    <SwiperBtn />
     </Swiper>
     <Swiper
-      spaceBetween={40}
+      spaceBetween={10}
       slidesPerView={3}
       freeMode={true}
       watchSlidesProgress={true}
@@ -49,21 +50,21 @@ export default function SwiperCard({ }: ISwiper) {
       className="mySwiper"
     >
       <SwiperSlide>
-        <div className="relative w-[120px] h-[120px] ">
+        <div className="relative w-[140px] h-[120px] ">
 
-          <Image className="rounded-lg" fill src="/kaws.jpg" alt="nature-1" />
+          <Image style={{borderRadius: '8px'}} className="rounded-lg" fill src="/kaws.jpg" alt="nature-1" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="relative w-[120px] h-[120px]">
+        <div className="relative w-[140px] h-[120px]">
 
-          <Image className="rounded-lg" fill src="/kaws.jpg" alt="nature-2" />
+          <Image style={{borderRadius: '8px'}} className="rounded-lg" fill src="/kaws.jpg" alt="nature-2" />
         </div>
       </SwiperSlide>
       <SwiperSlide>
-        <div className="relative w-[120px] h-[120px]">
+        <div className="relative w-[140px] h-[120px]">
 
-          <Image className="rounded-lg" fill src="/kaws.jpg" alt="nature-3" />
+          <Image style={{borderRadius: '8px'}} className="rounded-lg" fill src="/kaws.jpg" alt="nature-3" />
         </div>
       </SwiperSlide>
       
