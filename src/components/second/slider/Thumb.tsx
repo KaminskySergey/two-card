@@ -8,7 +8,6 @@ type PropType = {
 
 export const Thumb: React.FC<PropType> = (props) => {
     const { selected, index, onClick } = props
-console.log(index)
     return (
         <div
             className={'embla-thumbs__slide'.concat(

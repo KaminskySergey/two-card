@@ -8,7 +8,6 @@ const sizes = ['8', '28', '48', '70', '160']
 
 export default function RadioGroupSize({}: IRadioGroupSize) {
     const [size, setSize] = useState('8')
-console.log(size)
 const handleChange = (size: string) => {
     setSize(size)
 }

@@ -7,7 +7,6 @@ const colors = ['blue', 'red', 'yellow', 'purple', 'green']
 
 const RadioGroupColor = () => {
   const [color, setColor] = useState('blue')
-console.log(color)
 const handleChange = (color: string) => {
   setColor(color)
 }
